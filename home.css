@@ -1,0 +1,988 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*ini style saya*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Maven+Pro&family=Noto+Serif:wght@400;700&family=Poppins:wght@300;800&family=Roboto:wght@300&family=Rubik:ital,wght@1,800&display=swap');
+
+*	{
+	box-sizing: border-box;
+	max-width:100%;
+}
+
+.container	{
+	max-width:100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding: 5% 5%;
+	flex-wrap: wrap;
+}
+
+header h1   {
+	width:10%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bolder;
+	font-size: 1rem;
+	line-height: 50px;
+}
+header ul   {
+	display: flex;
+	flex-direction: row;
+    flex-basis: 80%;
+	justify-content: flex-start;
+	line-height: 50px;
+}
+
+header ul li {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+}
+.materi	{
+	width: 32px;
+	height: 32px;
+	background-image: url(img/materi.png);
+	background-repeat: no-repeat;
+}
+
+.materi:active	{
+	position: relative;
+	top: -5px;
+}
+
+.submateri	{
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 0 5px 4px #e5e5e5;
+	
+}
+
+.submateri:target	{
+	right: 0;
+	height: 200px;
+	animation-name: article;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.submateri:target .close2 a	{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(img/close2.png);
+	margin-left: 1%;
+	margin-top: 1%;
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.4s;
+	animation-fill-mode: forwards;
+}
+
+.figure	{
+	display: flex;
+	flex-direction: row;
+}
+
+.figure figure	{
+	flex-grow: 1;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 1%;
+}
+
+.figure figure:hover	{
+	flex-grow: 1;
+	text-align: center;
+	cursor: pointer;
+	background-color: #f9fafa;
+}
+
+.submateri:target .figure .figure1 a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/newton.png);
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.submateri:target .figure .figure2 a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/physics.png);
+	padding: 1%;
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.submateri:target .figure .figure3 a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/quantum.png);
+	padding: 1%;
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.submateri .figure figure figcaption	{
+	display: none;
+}
+.submateri:target .figure figure figcaption	{
+	display: inline-block;
+}
+
+.kelas	{
+	width: 32px;
+	background-image: url(img/kelas.png);
+	background-repeat: no-repeat;
+}
+
+.kelas:active	{
+	position: relative;
+	top: -5px;
+}
+
+.subkelas	{
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 0 5px 4px #e5e5e5;
+	
+}
+
+.subkelas:target	{
+	right: 0;
+	height: 200px;
+}
+
+.subkelas:target .close2 a	{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(img/close2.png);
+	margin-left: 1%;
+	margin-top: 1%;
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.4s;
+	animation-fill-mode: forwards;
+}
+
+.subkelas:target .figure .kelas1 a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/newbie.png);
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.subkelas:target .figure .kelas2 a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/advance.png);
+	padding: 1%;
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.subkelas:target .figure .kelas3 a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/winner.png);
+	padding: 1%;
+	animation-name: sub;
+	animation-duration: 0.3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.subkelas .figure figure figcaption	{
+	display: none;
+}
+.subkelas:target .figure figure figcaption	{
+	display: inline-block;
+}
+
+.artikel {
+	width: 32px;
+	background-image: url(img/artikel.png);
+	background-repeat: no-repeat;
+}
+
+.artikel:active{
+	position: relative;
+	top: -5px;
+}
+
+.subartikel	{
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	box-shadow: 0 5px 4px #e5e5e5;
+	
+}
+
+.subartikel:target	{
+	right: 0;
+	height: 200px;
+}
+
+.subartikel:target .close2 a	{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(img/close2.png);
+	margin-left: 1%;
+	margin-top: 1%;
+	
+}
+
+.subartikel:target .figure .sains a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/sains.png);
+}
+
+.subartikel:target .figure .teknologi a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/teknologi.png);
+	padding: 1%;
+}
+
+.subartikel:target .figure .jurnal a	{
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	background-image: url(img/jurnal.png);
+	padding: 1%;
+}
+
+.subartikel .figure figure figcaption	{
+	display: none;
+}
+.subartikel:target .figure figure figcaption	{
+	display: inline-block;
+}
+
+header .login   {
+	display: none;
+	flex-direction: row;
+    flex-basis: 25%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	justify-content: flex-start;
+	line-height: 50px;
+}
+
+.login .masuk	{
+	flex-basis: 25%;
+	text-align: left;
+	padding-right: 20px;
+}
+
+
+.masuk a{
+	text-decoration: none;
+	color: #000;
+	flex-basis: 75%;
+	transition: 0.5s;
+}
+
+.login .masuk:hover	a {
+	padding-bottom: 10%;
+	border-bottom: 1px solid #e5e5e5;
+	font-weight: bold;
+}
+
+.login .masuk:active a {
+	padding-bottom: 10%;
+	border-bottom: 1px solid #e5e5e5;
+	font-weight: normal;
+}
+
+.login .daftar a	{
+	background-color: #0ccda3;
+	padding: 15% 60%;
+	border-radius: 5px;
+	color: #f9fafa;
+	text-decoration: none;
+}
+
+.login .daftar:active a	{
+	background-color: #0db893;
+}
+
+.menu-bar	a {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	background-image: url(img/menu-bar.png);
+}
+
+.submenu	{
+	position: fixed;
+	z-index: 9999;
+	background-color: #fff;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	display: block;
+	box-shadow: 0 0 5px #797979;
+}
+
+.submenu:target	{
+	width: 20%;
+	height: 105px;
+	animation-name: menu-sub;
+	animation-duration: 0.5;
+	animation-fill-mode: forwards;
+}
+
+.submenu .close	a	{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(img/close.png);
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.masuk2 a	{
+	width: 100%;
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	padding-left: 5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;	
+	transition: 0.3s;
+	border-top: 1px solid #e5e5e5;		
+}	
+
+.masuk2 a:hover	{
+	background-color: #f9fafa;
+	font-weight: bold;
+}
+
+.masuk2 a:active	{
+	background-color: #0ccda3;
+	font-weight: normal;
+}
+
+.daftar2 a	{
+	width: 100%;
+	display: inline-block;
+	text-decoration: none;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	padding-left: 5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
+	transition: 0.3s;
+	border-top: 1px solid #e5e5e5;		
+
+}
+.daftar2 a:hover	{
+	background-color: #f9fafa;
+	font-weight: bold;
+}
+
+.daftar2 a:active	{
+	background-color: #0ccda3;
+	font-weight: normal;
+}
+
+.content	{
+	height: 600.3px;
+	margin-top: 50px;
+	padding-top: 120px;
+}
+.content h1	{
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	padding-left: 5%;
+	font-size: 70px;
+	font-weight: bold;
+	color: #0ccda3;
+	text-shadow: 1px 1px #797979;
+	text-align: center;
+	letter-spacing: normal;
+	margin-bottom: 5%;
+	cursor: pointer;
+}
+
+.content .txt-content	{
+	background-color: #000;
+	width:80%;
+	padding:2%;
+	margin-left: 10%;
+	margin-top: 5.2%;
+	text-align: center;
+	border-radius:10px;
+	cursor: pointer;
+}
+.txt-content a	{
+	text-decoration: none;
+	color: #0ccda3;
+}
+
+.content-right	{
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 5%;
+	cursor: pointer;
+}
+
+.sponsor	{
+	display: flex;
+	flex-wrap: wrap;
+	max-width:100%;
+	margin-top: 300px;
+	margin-bottom: 100px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.btn	{
+	text-align: center;
+}
+.zenius	{
+	flex-basis: 50%;
+	margin-bottom: 30px;
+}
+.brainly	{
+	flex-basis: 50%;
+
+}
+.ruangguru	{
+	flex-basis: 50%;
+}
+.cakap	{
+	flex-basis: 50%;
+}
+
+.text	{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.text h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 20px;
+	color: #0ccda3;
+}
+.text p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #797979;
+}
+
+.unggul	{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.unggul1	{
+	box-sizing: border-box;
+	flex-basis: 40%;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-right: 15px;
+	margin-left: 15px;
+	padding: 5%;
+	border-radius: 20px;
+	box-shadow: 0 0 5px #797979;
+	cursor: pointer;
+}
+
+.unggul1:hover	{
+	box-sizing: border-box;
+	flex-basis: 40%;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-right: 15px;
+	margin-left: 15px;
+	padding: 5%;
+	border-radius: 20px;
+	box-shadow: 0 0 10px #797979;
+	cursor: pointer;
+}
+.unggul1 h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.unggul1 p {
+	font-size: 17px;
+	color: #797979;
+}
+footer {
+	height: 100px;
+	display: flex;
+	padding: 0 5%;
+}
+footer a {
+	flex-basis: 50%;
+	line-height: 100px;
+	color: #797979;
+	text-decoration: none;
+}
+footer p {
+	flex-basis: 50%;
+	text-align: right;
+	line-height: 100px;
+	color: #797979;
+}
+
+
+@media screen and (min-width:1280px) {
+	.container	{
+		width:100%;
+		box-sizing: border-box;
+	}
+
+	header	{
+		padding: 25px 5%;
+	}
+	header .login   {
+		display: flex;
+		flex-direction: row;
+		flex-basis: 25%;
+		font-family: 'Roboto', sans-serif;
+		font-size: 17px;
+		justify-content: center;
+		line-height: 50px;
+	}
+	.menu-bar	{
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		background-image: url(img/menu-bar.png);
+		display: none;
+	}
+	.submenu	{
+		display: none;
+	}
+	header h1   {
+		flex-basis: 10%;
+		font-family: 'Roboto', sans-serif;
+		font-weight: bolder;
+		font-size: 20px;
+	}
+	
+	header ul   {
+		display: flex;
+		flex-direction: row;
+		flex-basis: 40%;
+		justify-content: center;
+		line-height: 50px;
+		margin-left:20%;
+		margin-right: 5%;
+		padding-top: 1%;
+	}
+	header ul li {
+		display: flex;
+		flex-grow: 1;
+		justify-content: center;
+	}
+
+	.content h1	{
+		flex: auto;
+		width: 65%;
+		font-family: 'Roboto', sans-serif;
+		padding-left: 5%;
+		font-size: 80px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.content-right	{
+		flex: auto;
+		width: 80%;
+		padding-right: 5%;
+		margin-top: 0%;
+		margin-left: 0%;
+	}
+	.content .txt-content	{
+		background-color: #000;
+		width:20%;
+		padding:2%;
+		margin-left: 5%;
+		margin-top: 5.2%;
+		text-align: center;
+		border-radius:10px;
+		cursor: pointer;
+		transition: 0.5s;
+	}
+	.txt-content:hover 	{
+		box-shadow: 0px 10px 2px -5px #797979;
+		margin-top: 5%;
+	}
+	.txt-content:active 	{
+		box-shadow: 0px 10px 2px -5px #797979;
+		margin-top: 5.2%;
+		box-shadow: 0px 0px 2px #797979;
+	}
+	.txt-content a	{
+		text-decoration: none;
+		color: #0ccda3;
+	}
+	.content	{
+		display: flex;
+		height: 600.3px;
+		margin-top: 50px;
+		padding-top: 120px;
+
+	}
+	.sponsor	{
+		display: flex;
+		max-width:100%;
+		margin-top: 50px;
+		margin-bottom: 100px;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		flex-wrap:nowrap;
+	}
+	.btn	{
+		text-align: center;
+	}
+	.zenius	{
+		flex-basis: 25%;
+		margin-bottom: 0px;
+	}
+	.brainly	{
+		flex-basis: 25%;
+
+	}
+	.ruangguru	{
+		flex-basis: 25%;
+	}
+	.cakap	{
+		flex-basis: 25%;
+	}
+	.text	{
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	.text h3 {
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+		font-size: 40px;
+		margin-bottom: 20px;
+		color: #0ccda3;
+	}
+	.text p {
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		color: #797979;
+	}
+	.unggul	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.unggul1	{
+		box-sizing: border-box;
+		flex-basis: 40%;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 30px;
+		margin-right: 15px;
+		margin-left: 15px;
+		padding: 5%;
+		border-radius: 20px;
+		box-shadow: 0 0 5px #797979;
+		cursor: pointer;
+	}
+	.unggul1 h3 {
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.unggul1 p {
+		font-size: 17px;
+		color: #797979;
+	}
+	footer {
+		height: 100px;
+		display: flex;
+		padding: 0 5%;
+	}
+	footer a {
+		flex-basis: 50%;
+		line-height: 100px;
+		color: #797979;
+		text-decoration: none;
+	}
+	footer p {
+		flex-basis: 50%;
+		text-align: right;
+		line-height: 100px;
+		color: #797979;
+	}
+}
+
+
+	
+
+@media screen and (max-width:670px) {
+	.content h1	{
+		width:90%;
+		font-size: 60px;
+		text-align: center;
+		margin-left: 5%;
+	}
+	.content .txt-content	{
+		background-color: #000;
+		width:80%;
+		padding:2%;
+		margin-left: 5%;
+		margin-top: 5%;
+		text-align: center;
+		border-radius:10px;
+	}
+	.txt-content a	{
+		text-decoration: none;
+		color: #0ccda3;
+	}
+	.content .txt-content	{
+		background-color: #000;
+		width:80%;
+		padding:2%;
+		margin-left: 10%;
+		margin-top: 5%;
+		text-align: center;
+		border-radius:10px;
+	}
+	.txt-content a	{
+		text-decoration: none;
+		color: #0ccda3;
+	}
+	.unggul	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.unggul1	{
+		box-sizing: border-box;
+		flex-basis: 80%;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 30px;
+		margin-right: 15px;
+		margin-left: 15px;
+		padding: 5%;
+		border-radius: 20px;
+		box-shadow: 0 0 5px #797979;
+		cursor: pointer;
+	}
+	.unggul1 h3 {
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.unggul1 p {
+		font-size: 17px;
+		color: #797979;
+	}
+	header ul li {
+		flex-grow: 1;
+		justify-content: center;
+		display: none;
+	}
+	.submenu:target	{
+		top: 0;
+		width: 40%;
+		height: 230px;
+		border-radius: 0;
+		animation-name: sub-menu;
+		animation-duration: 0.3s;
+		animation-fill-mode: forwards;
+	}
+
+	.materi2	{
+		display: inline-block;
+		width: 100%;
+		padding-left: 5%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		border-top: 1px solid #e5e5e5;
+		color: #000;
+		text-decoration: none;
+		font-size: 20px;
+		transition: 0.3s;
+	}
+	.materi2:hover	{
+		background-color: #f9fafa;
+		font-weight: bold;
+	}
+	.kelas2	{
+		display: inline-block;
+		width: 100%;
+		padding-left: 5%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		border-top: 1px solid #e5e5e5;
+		color: #000;
+		text-decoration: none;
+		font-size: 20px;
+		transition: 0.3s;
+	}
+	.kelas2:hover	{
+		background-color: #f9fafa;
+		font-weight: bold;
+	}
+	.artikel2	{
+		display: inline-block;
+		width: 100%;
+		padding-left: 5%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		border-top: 1px solid #e5e5e5;
+		color: #000;
+		text-decoration: none;
+		font-size: 20px;
+		transition: 0.3s;
+	}
+	.artikel2:hover	{
+		background-color: #f9fafa;
+		font-weight: bold;
+	}
+}
+
+/*css animasi home*/
+@keyframes sub-menu {
+	from {
+		width: 0;
+		height: 230px;
+	}
+	to {
+		width: 40%;
+		height: 230px;
+	}
+}
+
+@keyframes menu-sub {
+	from {
+		width: 0;
+		height: 105px;
+	}
+	to {
+		width: 20%;
+		height: 105px;
+	}
+}
+
+
+
+/*Ini adalah clearfix*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
