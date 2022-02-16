@@ -951,11 +951,11 @@ footer p {
 @keyframes sub-menu {
 	from {
 		width: 0;
-		height: 250px;
+		height: 250;
 	}
 	to {
 		width: 40%;
-		height: 250px;
+		height: 25px;
 	}
 }
 
