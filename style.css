@@ -890,7 +890,7 @@ footer p {
 	.submenu:target	{
 		top: 0;
 		width: 40%;
-		height: 250px;
+		height: 230px;
 		border-radius: 0;
 		animation-name: sub-menu;
 		animation-duration: 0.3s;
@@ -951,11 +951,11 @@ footer p {
 @keyframes sub-menu {
 	from {
 		width: 0;
-		height: 250px;
+		height: 230px;
 	}
 	to {
 		width: 40%;
-		height: 250px;
+		height: 230px;
 	}
 }
 
